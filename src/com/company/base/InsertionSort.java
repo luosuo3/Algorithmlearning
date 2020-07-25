@@ -1,4 +1,4 @@
-package com.company.Base;
+package com.company.base;
 
 /**
  * @author 王峥
