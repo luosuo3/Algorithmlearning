@@ -1,4 +1,4 @@
-package com.company.base;
+package com.company.base_algorithm;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.company.lecode.jianzhioffer;//在一个数组 nums 中除一个数字只出现一次之外，其他数字都出现了三次。请找出那个只出现一次的数字。
+package com.company.lecode.jianzhi_offer;//在一个数组 nums 中除一个数字只出现一次之外，其他数字都出现了三次。请找出那个只出现一次的数字。
 //
 // 
 //
@@ -27,7 +27,6 @@ package com.company.lecode.jianzhioffer;//在一个数组 nums 中除一个数�
 
 
 import java.util.HashMap;
-import java.util.Map;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution03 {
