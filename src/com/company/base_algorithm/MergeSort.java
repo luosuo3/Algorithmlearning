@@ -6,9 +6,17 @@ import java.util.Arrays;
  * @author 王峥
  * @date 2020/7/25 3:12 下午
  */
+/**
+ *归并排序的思想是，利用二分的特性，将序列分成两个子序列进行排序，将排序后的两个子序列归并（合并），
+ * 当序列的长度为2时，它的两个子序列长度为1，即视为有序，可直接合并，即达到归并排序的最小子状态.
+ */
+
+/**
+ *归并排序的最好，最坏和平均时间复杂度都是O(n*logn)。但需要O(n)的辅助空间。归并排序是稳定的。
+ */
 public class MergeSort {
     public static void main(String[] args) {
-
+        System.out.println(7/2);
     }
     public static int[] MergeSort(int[] array) {
         if (array.length < 2) return array;
