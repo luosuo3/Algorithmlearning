@@ -4,6 +4,11 @@ package com.company.base_algorithm;
  * @author 王峥
  * @date 2020/7/29 10:11 下午
  */
+
+/**
+ *堆排序的整个过程中充分利用的二分思想，它的最好、最坏和平均时间复杂度都是O(nlogn)。
+ * 堆排序不需要额外的空间。堆排序的交换过程不连续，显然是不稳定的。
+ */
 public class Heapsort {
     void updateHeap(int a[], int i, int n) {
         int iMax = i,
