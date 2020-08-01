@@ -25,7 +25,7 @@ package com.company.lecode.jianzhi_offer;//求 1+2+...+n ，要求不能使用�
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution01 {
+class 一到N的合 {
     public int sumNums(int n) {
         int sum = add(n);
         return sum;

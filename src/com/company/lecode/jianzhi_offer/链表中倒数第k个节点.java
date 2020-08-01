@@ -22,7 +22,7 @@ package com.company.lecode.jianzhi_offer;
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution04 {
+class 链表中倒数第k个节点 {
     public ListNode getKthFromEnd(ListNode head, int k) {
         int length = 0;
         ListNode p = head;

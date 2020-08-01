@@ -27,7 +27,7 @@ package com.company.lecode.jianzhi_offer;//字符串的左旋转操作是把字�
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution02 {
+class 左旋转字符串 {
     public String reverseLeftWords(String s, int n) {
         String substring = s.substring(0, n);
         String result = s.substring(n) + substring;

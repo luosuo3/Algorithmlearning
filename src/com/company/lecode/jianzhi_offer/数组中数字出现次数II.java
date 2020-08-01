@@ -29,7 +29,7 @@ package com.company.lecode.jianzhi_offer;//在一个数组 nums 中除一个数�
 import java.util.HashMap;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution03 {
+class 数组中数字出现次数II {
     public int singleNumber(int[] nums) {
         HashMap<Integer, Integer> numberMap = new HashMap<>();
         for (int i : nums) {
