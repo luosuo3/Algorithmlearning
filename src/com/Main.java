@@ -1,6 +1,6 @@
 package com;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * @author 王峥
@@ -8,39 +8,22 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in);
-        int i=0, k=0;
-        while(cin.hasNextInt())
-        {
-            i = cin.nextInt();
-            k = cin.nextInt();
-            break;
-        }
-        int count=0;
-        for (int j = i; j < k; j++) {
-            if (!huiwen(j)) {
-                count++;
-            }
-
-        }
-        System.out.println(count);
-
+        frequencySort("traeeaaa");
     }
-    public static boolean huiwen(int n) {
-        if (n<=0) {
-            return false;
+    public static String frequencySort (String s) {
+        String s1 ="";
+        char[] chars = new char[s.length()];
+        ArrayList<Character> characters = new ArrayList<>();
+        Set<Character> set = new HashSet<>();
+        for (int i = 0; i < s.length(); i++) {
+            chars[i] = s.charAt(i);
         }
-        if (n % 10 == 0) {
-            return false;
+        Arrays.sort(chars);
+        for (char aChar : chars) {
+            s1 += aChar;
         }
-        int number=0;
-        for (number=0; number<n; number=number*10+n%10,n/=10) {
-            if (n==number||n==number/10) {
-                return true;
-            }
-        }
-        return false;
+        return s1;
+        // write code here
     }
-
 
 }
