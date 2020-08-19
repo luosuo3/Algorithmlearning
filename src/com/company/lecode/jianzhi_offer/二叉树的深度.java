@@ -45,7 +45,7 @@ import java.util.List;
 class 二叉树的深度 {
     public int maxDepth(TreeNode root) {
         if(root == null) return 0;
-        List<TreeNode> queue = new LinkedList<>() {{ add(root); }}, tmp;
+        List<TreeNode> queue = new LinkedList<TreeNode>() {{ add(root); }}, tmp;
         int res = 0;
         while(!queue.isEmpty()) {
             tmp = new LinkedList<>();

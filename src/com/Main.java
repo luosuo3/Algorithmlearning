@@ -8,22 +8,33 @@ import java.util.*;
  */
 public class Main {
     public static void main(String[] args) {
-        frequencySort("traeeaaa");
+        int[] a = {1,0,1,0,3};
+        moveZeroes(a);
     }
-    public static String frequencySort (String s) {
-        String s1 ="";
-        char[] chars = new char[s.length()];
-        ArrayList<Character> characters = new ArrayList<>();
-        Set<Character> set = new HashSet<>();
-        for (int i = 0; i < s.length(); i++) {
-            chars[i] = s.charAt(i);
+    public  static void moveZeroes(int[] nums) {
+        int k = -1; // 记录第一个0的位置
+        for (int i =0 ;i < nums.length; i++) {
+            int t = nums[i];
+            if (t == 0) {
+                // 如果前面没有出现过0则记录第一个0的位置为当前位置
+                if (k == -1) {
+                    k = i;
+                }
+                continue;
+            }
+            if (k > -1) {
+                // 前面有0，则将当前位置的值与0进行交换，并将0的位置加1即可
+                swarp(nums, i, k);
+                k++;
+            }
         }
-        Arrays.sort(chars);
-        for (char aChar : chars) {
-            s1 += aChar;
-        }
-        return s1;
-        // write code here
+        System.out.println(nums);
+    }
+
+    private static void swarp(int[] a, int i, int j) {
+        int t = a[i];
+        a[i] = a[j];
+        a[j] = t;
     }
 
 }
