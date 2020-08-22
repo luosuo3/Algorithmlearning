@@ -37,16 +37,16 @@ public class QuickSort {
             return;
         }
         // base中存放基准数
-        int base = array[left];
+        int point = array[left];
         int i = left, j = right;
         while(i != j) {
-            // 顺序很重要，先从右边开始往左找，直到找到比base值小的数
-            while(array[j] >= base && i < j) {
+            // 顺序很重要，先从右边开始往左找，直到找到比point值小的数
+            while(array[j] >= point && i < j) {
                 j--;
             }
 
             // 再从左往右边找，直到找到比base值大的数
-            while(array[i] <= base && i < j) {
+            while(array[i] <= point && i < j) {
                 i++;
             }
 
@@ -60,7 +60,7 @@ public class QuickSort {
 
         // 将基准数放到中间的位置（基准数归位）
         array[left] = array[i];
-        array[i] = base;
+        array[i] = point;
 
         // 递归，继续向基准的左右两边执行和上面同样的操作
         // i的索引处为上面已确定好的基准值的位置，无需再处理
