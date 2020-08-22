@@ -83,11 +83,27 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="/var/folders/bt/mx8j_5g970z3w6rgpkr0m8x40000gn/T/leetcode/editor/cn/[344]反转字符串.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/bt/mx8j_5g970z3w6rgpkr0m8x40000gn/T/leetcode/editor/cn/[344]反转字符串.java" />
+              <option name="questionId" value="344" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="/var/folders/bt/mx8j_5g970z3w6rgpkr0m8x40000gn/T/leetcode/editor/cn/[350]两个数组的交集 II.java">
           <value>
             <LeetcodeEditor>
               <option name="path" value="/var/folders/bt/mx8j_5g970z3w6rgpkr0m8x40000gn/T/leetcode/editor/cn/[350]两个数组的交集 II.java" />
               <option name="questionId" value="350" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/bt/mx8j_5g970z3w6rgpkr0m8x40000gn/T/leetcode/editor/cn/[387]字符串中的第一个唯一字符.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/bt/mx8j_5g970z3w6rgpkr0m8x40000gn/T/leetcode/editor/cn/[387]字符串中的第一个唯一字符.java" />
+              <option name="questionId" value="387" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -104,6 +120,22 @@
             <LeetcodeEditor>
               <option name="path" value="/var/folders/bt/mx8j_5g970z3w6rgpkr0m8x40000gn/T/leetcode/editor/cn/[797]所有可能的路径.java" />
               <option name="questionId" value="813" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/bt/mx8j_5g970z3w6rgpkr0m8x40000gn/T/leetcode/editor/cn/[7]整数反转.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/bt/mx8j_5g970z3w6rgpkr0m8x40000gn/T/leetcode/editor/cn/[7]整数反转.java" />
+              <option name="questionId" value="7" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/bt/mx8j_5g970z3w6rgpkr0m8x40000gn/T/leetcode/editor/cn/[984]不含 AAA 或 BBB 的字符串.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/bt/mx8j_5g970z3w6rgpkr0m8x40000gn/T/leetcode/editor/cn/[984]不含 AAA 或 BBB 的字符串.java" />
+              <option name="questionId" value="1026" />
             </LeetcodeEditor>
           </value>
         </entry>
