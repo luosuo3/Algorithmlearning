@@ -27,7 +27,10 @@ package com.company.primary_algorithm.string;//给出一个 32 位的有符号�
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class 整数反转 {
-    public int reverse(int x) {
+    public static void main(String[] args) {
+        reverse(-126);
+    }
+    public static int reverse(int x) {
         long res = 0;
         while (x != 0) {
             res = res * 10 + x % 10;

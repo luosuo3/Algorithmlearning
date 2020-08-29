@@ -52,7 +52,7 @@ class 旋转图像 {
         for (int i = 0; i <len/2 ; i++) {
             for (int j = i; j < len-i-1; j++) {
 //                上转右
-                tmp1 = matrix[j][len - i - 1];
+                  tmp1 = matrix[j][len - i - 1];
                 matrix[j][len - i - 1] = matrix[i][j];
 //                右转下
                 tmp2 = matrix[len - i - 1][len - j - 1];
