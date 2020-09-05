@@ -30,10 +30,10 @@ public class BubbleSort {
         }
         for (int i = 0; i <array.length ; i++) {
             for (int j = 0; j <array.length-i-1; j++) {
-                if (array[j+i]<array[j]) {
-                    int temp = array[j + i];
-                    array[j + i] = array[j];
-                    array[i] = temp;
+                if (array[j+1]<array[j]) {
+                    int temp = array[j + 1];
+                    array[j + 1] = array[j];
+                    array[j] = temp;
                 }
             }
         }

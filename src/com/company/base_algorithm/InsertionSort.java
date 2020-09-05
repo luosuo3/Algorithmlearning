@@ -15,7 +15,7 @@ package com.company.base_algorithm;
  */
 public class InsertionSort {
     public static void main(String[] args) {
-        int[] array = {1, 2, 5, 3, 7, 6, 9};
+        int[] array = {11,8 , 5, 3, 7, 6, 9};
         InsertionSort.insertionSort(array);
     }
     public static int[] insertionSort(int [] array) {

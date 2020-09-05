@@ -8,7 +8,7 @@ package com.company.base_algorithm;
 /**
  *无论如何都要完整地执行内外两重循环，故最好、最差和平均时间复杂度都是O(n2)，不需要额外空间。选择排序是不稳定的。
  */
-public class SelectionSort {
+public class  SelectionSort {
     public static void main(String[] args) {
         int[] array = {1, 2, 5, 3, 7, 6, 9};
         SelectionSort.selectionSort(array);
