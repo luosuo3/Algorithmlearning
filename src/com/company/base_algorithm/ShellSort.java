@@ -4,26 +4,70 @@ package com.company.base_algorithm;
  * @author 王峥
  * @date 2020/7/25 3:11 下午
  */
+/*
+希尔排序可以被认为是简单插入排序的一种改进。插入排序一个比较耗时的地方在于需要将元素反复后移，
+因为它是以1为增量进行比较的元素的后移可能会进行多次。一个长度为n的序列，以1为增量就是一个序列，
+以2为增量就形成两个序列，以i为增量就形成i个序列。希尔排序的思想是，先以一个较大的增量，将序列分成几个子序列，
+将这几个子序列分别排序后，合并，在缩小增量进行同样的操作，知道增量为1时，序列已经基本有序，这是进行简单插入排序的效率就会较高。
+希尔排序的维基词条上有一个比较好的解释例子如下：
+// 原始序列
+13 14 94 33 82 25 59 94 65 23 45 27 73 25 39 10
+// 以5为增量划分，5列，每列即为一个子序列
+13 14 94 33 82
+25 59 94 65 23
+45 27 73 25 39
+10
+// 对每一个子序列进行插入排序得到以下结果
+10 14 73 25 23
+13 27 94 33 39
+25 59 94 65 82
+45
+// 恢复一行显示为
+10 14 73 25 23 13 27 94 33 39 25 59 94 65 82 45
+// 再以3为增量划分，3列，每列即为一个子序列
+10 14 73
+25 23 13
+27 94 33
+39 25 59
+94 65 82
+45
+// 对每一个子序列进行插入排序得到如下结果
+10 14 13
+25 23 33
+27 25 59
+39 65 73
+45 94 82
+94
+// 恢复一行为
+10 14 13 25 23 33 27 25 59 39 65 73 45 94 82 94
+// 然后再以1为增量进行插入排序，即简单插入排序
+// 此时序列已经基本有序，分布均匀，需要反复后移的情况较少，效率较高
+* */
 public class ShellSort {
     public static void main(String[] args) {
-
-    }
-    public static int[] ShellSort(int[] array) {
-        int len = array.length;
-        int temp, gap = len / 2;
-        while (gap > 0) {
-            for (int i = gap; i < len; i++) {
-                temp = array[i];
-                int preIndex = i - gap;
-                while (preIndex >= 0 && array[preIndex] > temp) {
-                    array[preIndex + gap] = array[preIndex];
-                    preIndex -= gap;
-                }
-                array[preIndex + gap] = temp;
-            }
-            gap /= 2;
+        int[] nums = {22, 7, 3, 20, 17, 8};
+         shellSort(nums);
+        for (int i = 0; i < nums.length; i++) {
+            System.out.println(nums[i]);
         }
-        return array;
+    }
+    private static void shellSort(int[] arr) {
+        //step:步长
+        for (int step = arr.length / 2; step > 0; step /= 2) {
+            //对一个步长区间进行比较 [step,arr.length)
+            for (int i = step; i < arr.length; i++) {
+                int value = arr[i];
+                int j;
+
+                //对步长区间中具体的元素进行比较
+                for (j = i - step; j >= 0 && arr[j] > value; j -= step) {
+                    //j为左区间的取值，j+step为右区间与左区间的对应值。
+                    arr[j + step] = arr[j];
+                }
+                //此时step为一个负数，[j + step]为左区间上的初始交换值
+                arr[j + step] = value;
+            }
+        }
     }
 
 

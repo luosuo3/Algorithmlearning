@@ -32,7 +32,6 @@ public class Heapsort {
         }
     }
     public static void sortHeap(int[] nums, int end) {
-        int length = nums.length;
         for (int i = (end - 1) / 2; i >= 0; i--) {
             sortNode(nums, i, end);
         }
@@ -42,7 +41,6 @@ public class Heapsort {
         if (head < 0) {
             throw new RuntimeException("堆顶超过左边界");
         }
-        int length = nums.length;
         //左子节点坐标
         int left = head * 2 + 1;
         //右子节点坐标

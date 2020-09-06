@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * @author 王峥
  * @date 2020/7/25 3:12 下午
+ *
+ * 归并排序的思想是，利用二分的特性，将序列分成两个子序列进行排序，将排序后的两个子序列归并（合并），
+ * 当序列的长度为2时，它的两个子序列长度为1，即视为有序，可直接合并，即达到归并排序的最小子状态.
  */
 /**
  *归并排序的思想是，利用二分的特性，将序列分成两个子序列进行排序，将排序后的两个子序列归并（合并），
@@ -16,8 +19,14 @@ import java.util.Arrays;
  */
 public class MergeSort {
     public static void main(String[] args) {
-        System.out.println(7/2);
+        int[] nums = {16, 7, 3, 20, 17, 8};
+        int[] ints = MergeSort(nums);
+        for (int num : ints) {
+            System.out.println(num);
+        }
+
     }
+
     public static int[] MergeSort(int[] array) {
         if (array.length < 2) return array;
         int mid = array.length / 2;
@@ -25,6 +34,7 @@ public class MergeSort {
         int[] right = Arrays.copyOfRange(array, mid, array.length);
         return merge(MergeSort(left), MergeSort(right));
     }
+
     public static int[] merge(int[] left, int[] right) {
         int[] result = new int[left.length + right.length];
         for (int index = 0, i = 0, j = 0; index < result.length; index++) {
