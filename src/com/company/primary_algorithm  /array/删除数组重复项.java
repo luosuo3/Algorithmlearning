@@ -60,5 +60,9 @@ class 删除数组重复项 {
         return back + 1;
     }
 
+    public int removeDuplicates2(int[] nums) {
+        return 0;
+    }
+
 }
 //leetcode submit region end(Prohibit modification and deletion)
