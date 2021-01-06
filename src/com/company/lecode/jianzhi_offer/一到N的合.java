@@ -31,11 +31,13 @@ class 一到N的合 {
         return sum;
 
     }
+
+
     public int add(int n) {
         if (n == 1) {
             return 1;
         }
-        return n +add(n - 1);
+        return n + add(n - 1);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

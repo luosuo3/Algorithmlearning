@@ -22,6 +22,20 @@ public class orderTree {
                 treeNode = treeNode2.right;
             }
         }
+    }
+    public static void tree2(TreeNode node) {
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode treeNode = node;
+        while (treeNode != null || !stack.isEmpty()) {
+            if (treeNode != null) {
+                System.out.println(node.val);
+                stack.push(treeNode);
+                treeNode = treeNode.left;
+            } else {
+                TreeNode pop = stack.pop();
+                pop = pop.right;
+            }
+        }
 
     }
     public class TreeNode {

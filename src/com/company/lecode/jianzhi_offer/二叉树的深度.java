@@ -28,10 +28,9 @@ package com.company.lecode.jianzhi_offer;//输入一棵二叉树的根节点，�
 
 //leetcode submit region begin(Prohibit modification and deletion)
 
-import javax.swing.tree.TreeNode;
 import java.util.LinkedList;
 import java.util.List;
-
+import java.util.Queue;
 
 
 //直接递归遍历
@@ -44,26 +43,57 @@ import java.util.List;
 //    层序遍历
 class 二叉树的深度 {
     public int maxDepth(TreeNode root) {
-        if(root == null) return 0;
-        List<TreeNode> queue = new LinkedList<TreeNode>() {{ add(root); }}, tmp;
+        if (root == null) return 0;
+        List<TreeNode> queue = new LinkedList<TreeNode>() {{
+            add(root);
+        }}, tmp;
         int res = 0;
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             tmp = new LinkedList<>();
-            for(TreeNode node : queue) {
-                if(node.left != null) tmp.add(node.left);
-                if(node.right != null) tmp.add(node.right);
+            for (TreeNode node : queue) {
+                if (node.left != null) tmp.add(node.left);
+                if (node.right != null) tmp.add(node.right);
             }
             queue = tmp;
             res++;
         }
         return res;
     }
+
+    public int maxDep(TreeNode node1) {
+        if (node1 == null) {
+            return 0;
+        }
+        Queue<TreeNode> queue = new LinkedList<TreeNode>(), tempQueue;
+        int res = 0;
+
+        while (node1 != null) {
+            tempQueue = new LinkedList<TreeNode>();
+            for (TreeNode node : queue) {
+                if (node.left != null) {
+                    tempQueue.add(node.left);
+                }
+                if (node.right != null) {
+                    tempQueue.add(node.right);
+                }
+                queue = tempQueue;
+                res++;
+            }
+
+
+        }
+        return res;
+    }
+
     public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
-    }
+}
 
 //leetcode submit region end(Prohibit modification and deletion)

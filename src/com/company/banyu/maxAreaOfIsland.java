@@ -27,7 +27,7 @@ public class maxAreaOfIsland {
         if (i<0 || j<0|| i >grid.length|| j > grid[i].length || grid[i][j]==0) {
             return 0;
         }
-        int are = 0;
+        int are = 1;
         grid[i][j] = 0;
         are+=dfs(i - 1, j, grid);
         are+=dfs(i + 1, j, grid);
